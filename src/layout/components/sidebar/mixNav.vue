@@ -163,7 +163,7 @@ function translationEn() {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <!-- 退出登陆 -->
+      <!-- 退出登录 -->
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
           <img :src="avatars" />
