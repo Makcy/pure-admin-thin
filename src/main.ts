@@ -1,11 +1,11 @@
 import App from "./App.vue";
 import router from "./router";
+import ElementPlus from "element-plus";
 import { setupStore } from "/@/store";
 import { getServerConfig } from "./config";
 import { createApp, Directive } from "vue";
 import { useI18n } from "../src/plugins/i18n";
 import { MotionPlugin } from "@vueuse/motion";
-import { useElementPlus } from "../src/plugins/element-plus";
 import { injectResponsiveStorage } from "/@/utils/storage/responsive";
 
 import "animate.css";
@@ -41,6 +41,6 @@ getServerConfig(app).then(async config => {
   await router.isReady();
   injectResponsiveStorage(app, config);
   setupStore(app);
-  app.use(MotionPlugin).use(useI18n).use(useElementPlus);
+  app.use(MotionPlugin).use(useI18n).use(ElementPlus);
   app.mount("#app");
 });
